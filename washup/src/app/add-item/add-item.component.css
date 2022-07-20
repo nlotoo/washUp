@@ -1,0 +1,11 @@
+.input-group mb-3 {
+    margin: auto;
+}
+
+.descriptionItem {
+    max-height: 75px;
+}
+
+.buttonAddForm {
+    margin-top: 50px;
+}

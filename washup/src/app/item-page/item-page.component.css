@@ -1,0 +1,11 @@
+.matCard {
+    display: inline-block;
+    border: 2px solid;
+    border-color: black;
+    max-width: 200px;
+    margin-left: 20px;
+}
+
+textarea {
+    resize: none;
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "projectwash-fdcf3": {
+      "hosting": {
+        "washup": [
+          "projectwash-fdcf3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "projectwash-fdcf3"
+  }
+}

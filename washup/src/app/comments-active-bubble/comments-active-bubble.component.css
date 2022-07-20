@@ -1,0 +1,20 @@
+.textarea {
+    width: 350px;
+    resize: none;
+}
+
+.author {
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 20px;
+}
+
+.contentDiv {
+    padding-top: 20px;
+}
+
+.example-card {
+    border: 1px solid;
+    border-color: grey;
+}

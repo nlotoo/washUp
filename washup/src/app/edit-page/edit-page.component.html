@@ -1,0 +1,48 @@
+<mat-card>
+    <mat-card-title fxLayoutAlign='center center'>Update Item Form</mat-card-title>
+    <mat-card-content fxLayoutAlign='center center'>
+        <form class='addItemForm' [formGroup]="updateItemForm" (submit)="updateItem()">
+            <div class='addItem'>
+                <mat-form-field appearance="outline">
+                    <mat-label>Item name</mat-label>
+                    <input matInput placeholder="Item name" formControlName="itemName">
+                    <mat-icon matSuffix>label_important</mat-icon>
+                    <mat-hint *ngIf="updateItemForm.controls?.itemName.touched &&  updateItemForm.controls.itemName.errors?.required">You shoud be type name </mat-hint>
+                </mat-form-field>
+            </div>
+            <div class='colorItem'>
+                <mat-form-field appearance="outline">
+                    <mat-label>Color Item</mat-label>
+                    <input matInput placeholder="Color Item" formControlName="color">
+                    <mat-icon matSuffix>opacity</mat-icon>
+                    <mat-hint *ngIf="updateItemForm.controls.color.touched &&  updateItemForm.controls.color.errors?.required">You shoud be type your color </mat-hint>
+
+                </mat-form-field>
+            </div>
+            <div class='imgURL'>
+                <mat-form-field appearance="outline">
+                    <mat-label>Image Url</mat-label>
+                    <input matInput placeholder="image url" formControlName="imageUrl">
+                    <mat-icon matSuffix>image</mat-icon>
+                    <mat-hint *ngIf="updateItemForm.controls.imageUrl.touched &&  updateItemForm.controls.imageUrl.errors?.required">Your URL is incorect</mat-hint>
+
+                </mat-form-field>
+            </div>
+            <div class='descriptionItem'>
+                <mat-form-field appearance="outline">
+                    <mat-label>Description</mat-label>
+                    <textarea class="textareaA" rows="5" cols="" matInput placeholder="Here type your description " formControlName='description'> </textarea>
+                    <!-- <mat-hint>You can write only 160 symbols</mat-hint> -->
+                    <mat-icon matSuffix>A</mat-icon>
+                    <mat-hint *ngIf="updateItemForm.controls.description.touched &&  updateItemForm.controls.description.errors?.required">You need write description no more of 160 symbols</mat-hint>
+                    <mat-hint *ngIf="this.updateItemForm.controls.description.value.length >160">You shoud be write no more 160 symbols</mat-hint>
+
+                </mat-form-field>
+            </div>
+            <!-- <div class="alert alert-danger" *ngIf="warningMessage">{{warningMessage}}</div> -->
+            <button class="buttonAddForm" mat-flat-button color="accent">Update item</button>
+        </form>
+
+    </mat-card-content>
+
+</mat-card>

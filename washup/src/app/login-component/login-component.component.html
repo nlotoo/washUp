@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-title fxLayoutAlign='center center'>Login</mat-card-title>
+    <mat-card-content fxLayoutAlign='center center'>
+        <form class='registerForm' [formGroup]="loginForm" (submit)="loginUser()">
+            <div class='username'>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="type your username" formControlName="email">
+                    <mat-icon matSuffix>people</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint>    -->
+                </mat-form-field>
+            </div>
+            <div class='password'>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="type your password" formControlName="password">
+                    <mat-icon matSuffix>password</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+            </div>
+            <div class='alert alert-warning' *ngIf="warningMessage">{{warningMessage}}</div>
+            <button mat-stroked-button color="accent">Login</button>
+        </form>
+
+
+    </mat-card-content>
+
+</mat-card>

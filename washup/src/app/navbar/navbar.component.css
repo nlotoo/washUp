@@ -1,0 +1,21 @@
+.menuBar {
+    margin-left: 1000px;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+.myApp:hover {
+    cursor: pointer;
+}
+
+a:hover {
+    color: grey;
+}
+
+li {
+    margin-left: 10px;
+    list-style-type: none;
+}

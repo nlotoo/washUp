@@ -1,0 +1,48 @@
+<mat-card>
+    <mat-card-title fxLayoutAlign='center center'>Register Form</mat-card-title>
+    <mat-card-content fxLayoutAlign='center center'>
+        <form class='registerForm' [formGroup]="registerForm" (submit)="registerUser()">
+            <div class='username'>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="type your email" formControlName='email'>
+                    <mat-icon matSuffix>people</mat-icon>
+                    <mat-hint *ngIf="this.registerForm.controls.email?.errors?.required && this.registerForm.controls.email?.touched">Please type your email</mat-hint>
+
+                </mat-form-field>
+                <div class="alert alert-danger" *ngIf="this.registerForm.controls?.email?.errors?.minlength"> Your username should be more 2 leters </div>
+            </div>
+            <div class='password'>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="type your password" formControlName='password'>
+                    <mat-icon matSuffix>password</mat-icon>
+
+                    <mat-hint *ngIf="this.registerForm.controls.password?.errors?.required && this.registerForm.controls.password?.touched">Please type your password</mat-hint>
+
+                    <!-- <mat-hint>Hint</mat-hint> -->
+
+                </mat-form-field>
+            </div>
+            <div class='rePassword'>
+                <mat-form-field appearance="outline">
+                    <mat-label>Reply password</mat-label>
+                    <input matInput placeholder="type again your password" formControlName='rePass'>
+                    <mat-icon matSuffix>password</mat-icon>
+
+                    <mat-hint *ngIf="this.registerForm.controls.rePass?.errors?.required && this.registerForm.controls.rePass?.touched">Please type your password</mat-hint>
+
+                </mat-form-field>
+                <div class="alert alert-danger" *ngIf="this.registerForm.controls.password.value !== this.registerForm.controls.rePass.value">Passwords should be same</div>
+            </div>
+            <button mat-stroked-button color="primary" [disabled]="this.registerForm.invalid">Register</button>
+            <div class="alert alert-warning" *ngIf="errorMessage">{{errorMessage}}</div>
+            <div class="alert alert-warning" *ngIf="warningMessage">{{warningMessage}}</div>
+            <!-- <div class="alert alert-success"> Successful registeration </div> -->
+
+
+        </form>
+
+    </mat-card-content>
+
+</mat-card>

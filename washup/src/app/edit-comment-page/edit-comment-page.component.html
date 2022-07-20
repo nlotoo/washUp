@@ -1,0 +1,19 @@
+<div class="contentDiv" fxLayoutAlign="center center">
+    <mat-card class="example-card">
+        <mat-card-subtitle>Add Comment</mat-card-subtitle>
+        <span class="author">Author</span> {{data?.email}}
+        <mat-card-subtitle>
+        </mat-card-subtitle>
+        <mat-card-content [formGroup]="sendingData">
+            <textarea matInput #inputVal class="textarea" rows="4" cols="70" formControlName="textarea">{{data?.content}}</textarea>
+        </mat-card-content>
+        <mat-hint>Your comment lenth shoud be 160 characters </mat-hint>
+
+        <!-- <pre> sendingData.controls.value | json </pre> -->
+        <mat-card-actions>
+            <button (click)="newData(inputVal.value)" mat-button>SAVE</button>
+            <button (click)="deleteComment()" mat-button>DELETE</button>
+
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,17 @@
+<div class="contentDiv" fxLayoutAlign="center center">
+    <mat-card class="example-card">
+        <mat-card-subtitle>Add Comment</mat-card-subtitle>
+        <span class="author">Author</span>
+
+        <mat-card-subtitle>
+            {{uername}}</mat-card-subtitle>
+        <mat-card-content>
+            <textarea matInput #inputVal class="textarea" rows="4" cols="70"></textarea>
+        </mat-card-content>
+        <mat-hint>Your comment lenth shoud be 160 characters </mat-hint>
+
+        <mat-card-actions>
+            <button (click)="postComment(inputVal.value)" mat-button>POST</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

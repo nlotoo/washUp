@@ -1,0 +1,11 @@
+.example-card {
+    max-width: 400px;
+    border-color: cadetblue, solid, 2px;
+    margin-top: 20px;
+}
+
+.buttonLoadComments {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: antiquewhite;
+}

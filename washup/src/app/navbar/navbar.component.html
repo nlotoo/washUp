@@ -1,0 +1,18 @@
+<mat-toolbar>
+
+    <span class="myApp"> <a routerLink="/home">My app</a></span>
+    <div class="menuBar">
+        <ul fxLayout="row">
+
+            <li><a *ngIf="!isAuth()" routerLink="/login">Login</a></li>
+            <li><a *ngIf="!isAuth()" routerLink="/register">Register</a></li>
+            <li><a routerLink="/catalog">Catalog</a></li>
+            <li><a *ngIf="isAuth()" routerLink="/add-item">Add new Item</a> </li>
+            <li><a *ngIf="isAuth()" (click)="logout()" routerLink="/home">Logout</a></li>
+
+
+        </ul>
+    </div>
+</mat-toolbar>
+<div *ngIf=""> Hidden Div</div>
+<router-outlet></router-outlet>
