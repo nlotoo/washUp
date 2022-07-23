@@ -2,8 +2,10 @@
 # washUp - Single Page Application
 ## Created with Angular
 
-In the project directory, you can run: `npm start`
-You will  see any lint errors in the console.
+- In the washup folder directory, you need run: `npm start`
+You can  see any lint errors in the console.
+- In the rest api washup folder directory, you need run: `npm start`
+You can  see any lint errors in the cmd.
 
 ## Functionality
 -	Implemented authentication and authorization.
